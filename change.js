@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        anchors:['firstPage', 'secondPage', 'thirdPage']
+        anchors: ['firstPage', 'secondPage', 'thirdPage']
     });
 });
 
@@ -33,203 +33,203 @@ function explore(amount, counts, index) {
         console.log(counts);
         results.push(JSON.parse(JSON.stringify(counts)));
 
-            var linebreak = document.createElement("br");
-            var s = document.getElementById("sec");
-            var slide = document.createElement("div");
-            slide.className = "slide";
-            var wrapper = document.createElement("div");
+        var linebreak = document.createElement("br");
+        var s = document.getElementById("sec");
+        var slide = document.createElement("div");
+        slide.className = "slide";
+        var wrapper = document.createElement("div");
 
-            wrapper.className="wrapper";
-
-
-            var h = document.createElement("h1");
+        wrapper.className = "wrapper";
 
 
-            var eight = document.createElement("div");
-            var c = document.createTextNode(counts);
-            h.appendChild(c);
-
-            eight.className="eight";
-            eight.appendChild(h);
-            var one = document.createElement("div");
-            one.className="one";
-            one.appendChild(document.createTextNode("Goal: " + count));
+        var h = document.createElement("h1");
 
 
-            var two = document.createElement("div");
-            two.className="two";
-            two.appendChild(document.createTextNode("Denominations: " + denoms));
+        var eight = document.createElement("div");
+        var c = document.createTextNode(counts);
+        h.appendChild(c);
 
-            var three = document.createElement("div");
-            three.className="three";
-            three.appendChild(document.createTextNode("SUCCESS!"));
-
-            var four = document.createElement("div");
-            four.className="four";
-            var sum = 0;
-            for(var j = 0; j < counts.length; j++) {
-                sum += counts[j];
-            }
-            four.appendChild(document.createTextNode("Sum so far: " + sum));
-
-            var five = document.createElement("div");
-            five.className="five";
-            five.appendChild(document.createTextNode("Results so far: "));
-                                            five.appendChild(document.createElement("br"));
-
-            for (var j = 0; j < results.length; j++) {
-                five.appendChild(document.createTextNode(results[j]));
-                                five.appendChild(document.createElement("br"));
-
-                five.appendChild(linebreak);
-            }
-
-            var six = document.createElement("div");
-            six.className="six";
-            six.appendChild(document.createTextNode("public static void explore(int amount, CoinCounter counts) {"));
-                                            six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-
-            six.appendChild(document.createTextNode("  if (amount == 0) {"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-
-                        six.appendChild(document.createTextNode("    counts.printCounts();"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        eight.className = "eight";
+        eight.appendChild(h);
+        var one = document.createElement("div");
+        one.className = "one";
+        one.appendChild(document.createTextNode("Goal: " + count));
 
 
-            six.appendChild(document.createTextNode("} else if (counts.hasNextDenomination()) {"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        var two = document.createElement("div");
+        two.className = "two";
+        two.appendChild(document.createTextNode("Denominations: " + denoms));
+
+        var three = document.createElement("div");
+        three.className = "three";
+        three.appendChild(document.createTextNode("SUCCESS!"));
+
+        var four = document.createElement("div");
+        four.className = "four";
+        var sum = 0;
+        for (var j = 0; j < counts.length; j++) {
+            sum += counts[j];
+        }
+        four.appendChild(document.createTextNode("Sum so far: " + sum));
+
+        var five = document.createElement("div");
+        five.className = "five";
+        five.appendChild(document.createTextNode("Results so far: "));
+        five.appendChild(document.createElement("br"));
+
+        for (var j = 0; j < results.length; j++) {
+            five.appendChild(document.createTextNode(results[j]));
+            five.appendChild(document.createElement("br"));
+
+            five.appendChild(linebreak);
+        }
+
+        var six = document.createElement("div");
+        six.className = "six";
+        six.appendChild(document.createTextNode("public static void explore(int amount, CoinCounter counts) {"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+
+        six.appendChild(document.createTextNode("  if (amount == 0) {"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+
+        six.appendChild(document.createTextNode("    counts.printCounts();"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("    int denomination = counts.nextDenomination();"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("} else if (counts.hasNextDenomination()) {"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("    int max = amount / denomination;"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("    int denomination = counts.nextDenomination();"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("    for (int i = 0; i <= max; i++) {"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("    int max = amount / denomination;"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("      counts.setCount(i);"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("    for (int i = 0; i <= max; i++) {"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("      explore(amount - i * denomination, counts);"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("      counts.setCount(i);"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("      counts.clearCount();"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("      explore(amount - i * denomination, counts);"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
-            six.appendChild(document.createTextNode("    }"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+        six.appendChild(document.createTextNode("      counts.clearCount();"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
-            six.appendChild(document.createTextNode("}"));
-                                                        six.appendChild(document.createElement("br"));
 
-            six.appendChild(document.createTextNode("}"));
-                                                        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode("    }"));
+        six.appendChild(document.createElement("br"));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
+        six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
-            var seven = document.createElement("div");
-            seven.className="seven";
+        six.appendChild(document.createTextNode("}"));
+        six.appendChild(document.createElement("br"));
 
-            for (var k = 0; k < denoms.length; k++) {
-                for (var l = 0; l < counts[k] / denoms[k]; l++) {
-                    var coin = document.createElement("span");
-                    // coin.className="circle";
-                    coin.appendChild(document.createTextNode(denoms[k]));
-                    seven.appendChild(coin);
+        six.appendChild(document.createTextNode("}"));
+        six.appendChild(document.createElement("br"));
 
-                }
+        var seven = document.createElement("div");
+        seven.className = "seven";
+
+        for (var k = 0; k < denoms.length; k++) {
+            for (var l = 0; l < counts[k] / denoms[k]; l++) {
+                var coin = document.createElement("span");
+                // coin.className="circle";
+                coin.appendChild(document.createTextNode(denoms[k]));
+                seven.appendChild(coin);
 
             }
-            // var coin = document.createElement("span");
-            // // coin.className="circle";
-            // coin.appendChild(document.createTextNode("1"));
-            // seven.appendChild(coin);
+
+        }
+        // var coin = document.createElement("span");
+        // // coin.className="circle";
+        // coin.appendChild(document.createTextNode("1"));
+        // seven.appendChild(coin);
 
 
 
 
-    //                     counts.setCount(i);
-    //                     explore(amount - i * denomination, counts);
-    //                     counts.clearCount();
-    //                 }
-    //             } 
-    //         }"
+        //                     counts.setCount(i);
+        //                     explore(amount - i * denomination, counts);
+        //                     counts.clearCount();
+        //                 }
+        //             } 
+        //         }"
 
 
 
-    //             ));
+        //             ));
 
-    // public static void explore(int amount, CoinCounter counts) {
-    //     if (amount == 0) {
-    //         counts.printCounts();
-    //     } else if (counts.hasNextDenomination()) {
-    //         int denomination = counts.nextDenomination();
-    //         int max = amount / denomination;
-    //         for (int i = 0; i <= max; i++) {
-    //             counts.setCount(i);
-    //             explore(amount - i * denomination, counts);
-    //             counts.clearCount();
-    //         }
-    //     } 
-    // }
+        // public static void explore(int amount, CoinCounter counts) {
+        //     if (amount == 0) {
+        //         counts.printCounts();
+        //     } else if (counts.hasNextDenomination()) {
+        //         int denomination = counts.nextDenomination();
+        //         int max = amount / denomination;
+        //         for (int i = 0; i <= max; i++) {
+        //             counts.setCount(i);
+        //             explore(amount - i * denomination, counts);
+        //             counts.clearCount();
+        //         }
+        //     } 
+        // }
 
-                        wrapper.appendChild(eight);
+        wrapper.appendChild(eight);
 
-            wrapper.appendChild(one);
-            wrapper.appendChild(two);
-                        wrapper.appendChild(three);
-            wrapper.appendChild(four);
-            wrapper.appendChild(five);
-           wrapper.appendChild(six);
-            wrapper.appendChild(seven);
-
-
-            slide.appendChild(wrapper);
+        wrapper.appendChild(one);
+        wrapper.appendChild(two);
+        wrapper.appendChild(three);
+        wrapper.appendChild(four);
+        wrapper.appendChild(five);
+        wrapper.appendChild(six);
+        wrapper.appendChild(seven);
 
 
-            s.appendChild(slide);
+        slide.appendChild(wrapper);
+
+
+        s.appendChild(slide);
     } else if (index >= 0) {
         var denomination = denoms[index];
-                    console.log("denom: " + denomination);
+        console.log("denom: " + denomination);
 
         var max = amount / denomination;
         if (max < 1) {
             max = 0;
         }
-             
+
         // var i = 0;                     //  set your counter to 1
 
         // function myLoop () {           //  create a loop function
@@ -252,8 +252,8 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
 
         // myLoop();
 
-    //             console.log("max: " + max);
-    //                 setTimeout(function () {
+        //             console.log("max: " + max);
+        //                 setTimeout(function () {
 
         for (var i = 0; i <= max; i++) {
 
@@ -266,7 +266,7 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
             slide.className = "slide";
             var wrapper = document.createElement("div");
 
-            wrapper.className="wrapper";
+            wrapper.className = "wrapper";
 
 
             var h = document.createElement("h1");
@@ -276,119 +276,119 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
             var c = document.createTextNode(counts);
             h.appendChild(c);
 
-            eight.className="eight";
+            eight.className = "eight";
             eight.appendChild(h);
             var one = document.createElement("div");
-            one.className="one";
+            one.className = "one";
             one.appendChild(document.createTextNode("Goal: " + count));
 
 
             var two = document.createElement("div");
-            two.className="two";
+            two.className = "two";
             two.appendChild(document.createTextNode("Denominations: " + denoms));
 
             var three = document.createElement("div");
-            three.className="three";
+            three.className = "three";
             three.appendChild(document.createTextNode("Current denomination: " + denoms[index]));
 
             var four = document.createElement("div");
-            four.className="four";
+            four.className = "four";
             var sum = 0;
-            for(var j = 0; j < counts.length; j++) {
+            for (var j = 0; j < counts.length; j++) {
                 sum += counts[j];
             }
             four.appendChild(document.createTextNode("Sum so far: " + sum));
 
             var five = document.createElement("div");
-            five.className="five";
+            five.className = "five";
             five.appendChild(document.createTextNode("Results so far: "));
-                                            five.appendChild(document.createElement("br"));
+            five.appendChild(document.createElement("br"));
 
             for (var j = 0; j < results.length; j++) {
                 five.appendChild(document.createTextNode(results[j]));
-                                five.appendChild(document.createElement("br"));
+                five.appendChild(document.createElement("br"));
 
                 five.appendChild(linebreak);
             }
 
             var six = document.createElement("div");
-            six.className="six";
+            six.className = "six";
             six.appendChild(document.createTextNode("public static void explore(int amount, CoinCounter counts) {"));
-                                            six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
             six.appendChild(document.createTextNode("  if (amount == 0) {"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
-                        six.appendChild(document.createTextNode("    counts.printCounts();"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createTextNode("    counts.printCounts();"));
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("} else if (counts.hasNextDenomination()) {"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("    int denomination = counts.nextDenomination();"));
-                                                        six.appendChild(document.createElement("br"));
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("    int max = amount / denomination;"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("    for (int i = 0; i <= max; i++) {"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("      counts.setCount(i);"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("      explore(amount - i * denomination, counts);"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("      counts.clearCount();"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
 
             six.appendChild(document.createTextNode("    }"));
-                                                        six.appendChild(document.createElement("br"));
-                                                        six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
-six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
+            six.appendChild(document.createElement("br"));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
+            six.appendChild(document.createTextNode('\u00A0\u00A0'));
 
             six.appendChild(document.createTextNode("}"));
-                                                        six.appendChild(document.createElement("br"));
+            six.appendChild(document.createElement("br"));
 
             six.appendChild(document.createTextNode("}"));
-                                                        six.appendChild(document.createElement("br"));
+            six.appendChild(document.createElement("br"));
 
             var seven = document.createElement("div");
-            seven.className="seven";
+            seven.className = "seven";
 
             for (var k = 0; k < denoms.length; k++) {
                 for (var l = 0; l < counts[k] / denoms[k]; l++) {
@@ -408,39 +408,39 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
 
 
 
-    //                     counts.setCount(i);
-    //                     explore(amount - i * denomination, counts);
-    //                     counts.clearCount();
-    //                 }
-    //             } 
-    //         }"
+            //                     counts.setCount(i);
+            //                     explore(amount - i * denomination, counts);
+            //                     counts.clearCount();
+            //                 }
+            //             } 
+            //         }"
 
 
 
-    //             ));
+            //             ));
 
-    // public static void explore(int amount, CoinCounter counts) {
-    //     if (amount == 0) {
-    //         counts.printCounts();
-    //     } else if (counts.hasNextDenomination()) {
-    //         int denomination = counts.nextDenomination();
-    //         int max = amount / denomination;
-    //         for (int i = 0; i <= max; i++) {
-    //             counts.setCount(i);
-    //             explore(amount - i * denomination, counts);
-    //             counts.clearCount();
-    //         }
-    //     } 
-    // }
+            // public static void explore(int amount, CoinCounter counts) {
+            //     if (amount == 0) {
+            //         counts.printCounts();
+            //     } else if (counts.hasNextDenomination()) {
+            //         int denomination = counts.nextDenomination();
+            //         int max = amount / denomination;
+            //         for (int i = 0; i <= max; i++) {
+            //             counts.setCount(i);
+            //             explore(amount - i * denomination, counts);
+            //             counts.clearCount();
+            //         }
+            //     } 
+            // }
 
-                        wrapper.appendChild(eight);
+            wrapper.appendChild(eight);
 
             wrapper.appendChild(one);
             wrapper.appendChild(two);
-                        wrapper.appendChild(three);
+            wrapper.appendChild(three);
             wrapper.appendChild(four);
             wrapper.appendChild(five);
-           wrapper.appendChild(six);
+            wrapper.appendChild(six);
             wrapper.appendChild(seven);
 
 
@@ -450,14 +450,14 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
             s.appendChild(slide);
 
 
-                  // document.getElementById("h1").appendChild(document.createTextNode(counts));
-                  // document.getElementById("h1").appendChild(linebreak);
+            // document.getElementById("h1").appendChild(document.createTextNode(counts));
+            // document.getElementById("h1").appendChild(linebreak);
             explore(amount - i * denomination, counts, index - 1);
             counts[index] = 0;
 
         }
 
-    // }, 1000);
+        // }, 1000);
 
     }
 
@@ -469,4 +469,3 @@ six.appendChild( document.createTextNode( '\u00A0\u00A0' ) );
 //                     //  ..  setTimeout()
 //    }, 3000)
 // }
-
